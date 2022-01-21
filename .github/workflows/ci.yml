@@ -1,0 +1,13 @@
+name: ContinuousIntegration
+
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - run: echo Hello
