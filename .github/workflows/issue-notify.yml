@@ -16,6 +16,6 @@ on:
 
 jobs:
   notify:
-    uses: itzg/github-workflows/.github/workflows/issues-notify-discord.yml@feat/releases
+    uses: itzg/github-workflows/.github/workflows/issues-notify-discord.yml@main
     secrets:
       discordWebhook: "${{secrets.DISCORD_WEBHOOK}}"
