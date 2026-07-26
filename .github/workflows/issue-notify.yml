@@ -1,0 +1,21 @@
+name: Issues notify
+
+on:
+  issues:
+    types:
+      - opened
+      - labeled
+      - unlabeled
+      - closed
+  pull_request_target:
+    types:
+      - closed
+  release:
+    types:
+      - released
+
+jobs:
+  notify:
+    uses: itzg/github-workflows/.github/workflows/issues-notify-discord.yml@main
+    secrets:
+      discordWebhook: "${{secrets.DISCORD_WEBHOOK}}"
