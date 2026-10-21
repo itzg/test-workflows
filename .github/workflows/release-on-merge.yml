@@ -16,3 +16,8 @@ jobs:
         uses: itzg/release-on-merge-action@v1.1.0
         with:
           token: ${{ secrets.GH_RELEASE_TOKEN }}
+
+      - name: Display Release Output
+        if: steps.release-on-merge.outputs.release-version != ''
+        run: |
+          echo "Created release version: ${{ steps.release-on-merge.outputs.release-version }}"
